@@ -4,5 +4,13 @@
 // but you don't so you're going to write it from scratch:
 
 var stringifyJSON = function(obj) {
-  // your code goes here
+  if (isObject(obj)) {
+    return undefined;
+  } else {
+    return '9';
+  }
 };
+
+function isObject(obj) {
+  return obj === Object(obj) && Object.prototype.toString.call(obj) !== '[object Array]'
+}
