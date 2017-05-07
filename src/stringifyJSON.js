@@ -3,11 +3,11 @@ var stringifyJSON = function(obj) {
   if (Object.prototype.toString.call(obj) === "[object Null]"){
     return "null";
   } else if (Object.prototype.toString.call(obj) === "[object String]") {
-    return `"${obj.toString()}"`;
+    return `"${obj}"`;
   } else if (Object.prototype.toString.call(obj) === "[object Boolean]") {
-    return obj.toString();
+    return `${obj}`;
   } else if (Object.prototype.toString.call(obj) === "[object Number]") {
-    return obj.toString();
+    return `${obj}`;
   } else if (Object.prototype.toString.call(obj) === "[object Array]") {
     return stringifyArr(obj);
   } else if (Object(obj) && Object.prototype.toString.call(obj) !== '[object Array]'){
@@ -55,7 +55,9 @@ function stringifyObj (obj) {
 
 
 /*
+var foo = 9;
 var foo = [1,2];
+var foo = 'kevin';
 var foo = ['1','2'];
 var foo =  [[[[[[['abc']]]]]]];
 var foo = {'a': 'apple'};
