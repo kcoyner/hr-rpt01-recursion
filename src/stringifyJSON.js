@@ -62,11 +62,11 @@ var foo = ['1','2'];
 var foo =  [[[[[[['abc']]]]]]];
 var foo = {'a': 'apple'};
 var foo = {'foo': true, 'bar': false, 'baz': null};
+var foo = {a: '1', b: { c: { d: { g: 7, h: [[['', null, 'V']], 'i', 'c', {'bet you cant': 'get here by today'}]}, e: 5}}, f: 6};
 var foo = {
     'functions': function() {},
     'undefined': undefined
   };
-var foo = {a: '1', b: { c: { d: { g: 7, h: [[['', null, 'V']], 'i', 'c', {'bet you cant': 'get here by today'}]}, e: 5}}, f: 6};
 
 console.log(stringifyJSON(foo));
 console.log(JSON.stringify(foo));
